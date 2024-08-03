@@ -1,16 +1,17 @@
 import React from 'react';
 const Button = (props) => {
-	const mode = primary
-		? "storybook-button--primary"
-		: "storybook-button--secondary";
+	// const mode = props.primary
+	// 	? "storybook-button--primary"
+	// 	: "storybook-button--secondary";
 	return (
 		<button
 			type="button"
 			className={[
 				"storybook-button",
-				`storybook-button--${mode}`,
+				// `storybook-button--${props.mode}`,
 				"storybook-button--primary",
-				mode,
+				"storybook-button--storybook-button--primary",
+				// props.mode,
 			].join(" ")}
 			style={backgroundColor && { backgroundColor }}
 			{...props}
@@ -20,10 +21,10 @@ const Button = (props) => {
 }
 
 Button.propTypes = {
-	/**
-	 * Is this the principal call to action on the page?
-	 */
-	primary: PropTypes.bool,
+	// /**
+	//  * Is this the principal call to action on the page?
+	//  */
+	// primary: PropTypes.bool,
 	/**
 	 * What background color to use
 	 */
@@ -44,7 +45,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
 	backgroundColor: null,
-	primary: false,
+	// primary: false,
 	size: "medium",
 	onClick: undefined,
 };
