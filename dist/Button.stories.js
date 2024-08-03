@@ -29,7 +29,7 @@ var _default = exports.default = {
 }; // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 const Primary = exports.Primary = {
   args: {
-    // primary: true,
+    primary: true,
     label: "Primary"
   }
 };
