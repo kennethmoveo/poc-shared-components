@@ -10,20 +10,22 @@ function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e
 function Button(_ref) {
   let {
     label,
+    backgroundColor,
     onClick
   } = _ref;
-  return (
-    /*#__PURE__*/
-    // <button onClick={onClick} style={backgroundColor && { backgroundColor }}>
-    _react.default.createElement("button", {
-      onClick: onClick
-    }, label)
-  );
+  return /*#__PURE__*/_react.default.createElement("button", {
+    onClick: onClick,
+    style: backgroundColor && {
+      backgroundColor
+    }
+  }, label);
 }
 Button.propTypes = {
+  backgroundColor: _propTypes.default.string,
   label: _propTypes.default.string.isRequired,
   onClick: _propTypes.default.func
 };
 Button.defaultProps = {
+  backgroundColor: null,
   onClick: undefined
 };
