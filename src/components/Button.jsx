@@ -1,24 +1,18 @@
 import React from "react";
-const Button = (props) => {
-	// const mode = props.primary
-	// 	? "storybook-button--primary"
-	// 	: "storybook-button--secondary";
+import PropTypes from "prop-types";
+
+export default function Button({ label, onClick }) {
 	return (
-		<button
-			type="button"
-			className={[
-				"storybook-button",
-				// `storybook-button--${props.mode}`,
-				"storybook-button--primary",
-				"storybook-button--storybook-button--primary",
-				// props.mode,
-			].join(" ")}
-			style={props.backgroundColor && { ...props.backgroundColor }}
-			{...props}
-		>
-			{props.label}
-		</button>
+		// <button onClick={onClick} style={backgroundColor && { backgroundColor }}>
+		<button onClick={onClick}>{label}</button>
 	);
+}
+
+Button.propTypes = {
+	label: PropTypes.string.isRequired,
+	onClick: PropTypes.func,
 };
 
-export default Button;
+Button.defaultProps = {
+	onClick: undefined,
+};
