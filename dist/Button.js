@@ -18,7 +18,7 @@ function Button(_ref) {
     style: backgroundColor && {
       backgroundColor
     }
-  }, label);
+  }, "Text: ", label);
 }
 Button.propTypes = {
   backgroundColor: _propTypes.default.string,

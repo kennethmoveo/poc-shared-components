@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 export default function Button({ label, backgroundColor, onClick }) {
 	return (
 		<button onClick={onClick} style={backgroundColor && { backgroundColor }}>
-			{label}
+			Text: {label}
 		</button>
 	);
 }
